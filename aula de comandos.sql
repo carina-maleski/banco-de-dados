@@ -89,12 +89,18 @@ select * from tb_produtos order by nome;
 select * from tb_produtos where preco in (5.0,7.0,8.0);
 /*claúsula "in" seleciona quais registros quer ver sobre um atributo*/
 
+select * from tb_produtos where preco between 5.00 and 8.00;
 
+select * from tb_produtos where nome like "tomate";
 
+select * from tb_produtos where nome like "a%";
 
-
-
-
+select * from tb_produtos where nome like "a_o%";
+/*"a_o%" significa: 
+primeira letra == a; 
+segunda letra = _ == pode ser qualquer uma; 
+terceira letra == o; 
+quarta letra em diante = qualquer coisa*/
 
 
 
