@@ -5,14 +5,14 @@ use db_pizzaria_legal;
 #criando tabelas
 create table tb_categorias (
 id bigint auto_increment primary key,
-tipo varchar(255),
+tipo varchar(255) not null,
 massa varchar(255)
 );
 
 create table tb_pizzas (
 id bigint auto_increment primary key,
-nome varchar(255),
-valor decimal(5,2),
+nome varchar(255) not null,
+valor decimal(5,2) not null,
 tamanho varchar(255),
 categoria_id bigint,
 foreign key (categoria_id) references tb_categorias (id)

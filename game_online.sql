@@ -4,7 +4,7 @@ use db_generation_game_online;
 
 create table tb_classes (
 id bigint auto_increment primary key,
-grupo varchar(255),
+grupo varchar(255) not null,
 origem varchar(255),
 fortaleza varchar(255),
 fraqueza varchar(255)
@@ -13,9 +13,9 @@ fraqueza varchar(255)
 
 create table tb_personagens (
 id bigint auto_increment primary key,
-nome varchar(255),
-poderdeataque int,
-poderdedefesa int,
+nome varchar(255) not null,
+poderdeataque int not null,
+poderdedefesa int not null,
 classes_id bigint,
 foreign key (classes_id) references tb_classes(id)
 );
