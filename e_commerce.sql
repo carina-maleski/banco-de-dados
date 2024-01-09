@@ -90,3 +90,10 @@ select * from tb_produto where preco < 500;
 update tb_produto set quantidade = 99 where id = 10;
 /*6. Ao término atualize um registro desta tabela através de uma query de atualização.*/
 
+
+select tb_produto.nome, tb_produto.preco, tb_produto.quantidade, tb_marca.marca
+from tb_produto
+inner join tb_marca
+on tb_produto.marca_id = tb_marca.id
+where tb_produto.quantidade > 30;
+
