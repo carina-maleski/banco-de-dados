@@ -162,3 +162,14 @@ from tb_produtos;
 
 select max(preco) as maior_preço
 from tb_produtos;
+
+#agrupamento
+select tb_categorias.descricao, avg(preco) preco_medio
+from tb_produtos inner join tb_categorias
+on tb_categorias.id = tb_produtos.categoria_id
+group by tb_categorias.descricao;
+
+select tb_categorias.descricao, sum(quantidade) total
+from tb_produtos inner join tb_categorias
+on tb_produtos.categoria_id = tb_categorias.id
+group by tb_categorias.descricao;
